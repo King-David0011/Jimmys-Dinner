@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order burgers, pizza and beer from Jimmy's Diner.">
+    <title>Jimmy's Diner</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Smooch+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="app">
+
+        <header>
+            <h1>Jimmy's Diner</h1>
+            <p>The best burgers and pizzas in town.</p>
+        </header>
+
+        <main>
+            <p class="deal-banner">Meal deal: order any meal with a beer and get 10% off</p>
+
+            <section id="menu"></section>
+
+            <section id="order" class="hidden"></section>
+
+            <section id="thanks" class="thanks hidden">
+                <p id="thanks-message"></p>
+                <div class="rating">
+                    <p>How was your order?</p>
+                    <div class="stars">
+                        <button class="star" data-star="1" aria-label="1 star">★</button>
+                        <button class="star" data-star="2" aria-label="2 stars">★</button>
+                        <button class="star" data-star="3" aria-label="3 stars">★</button>
+                        <button class="star" data-star="4" aria-label="4 stars">★</button>
+                        <button class="star" data-star="5" aria-label="5 stars">★</button>
+                    </div>
+                    <p id="rating-message"></p>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <div id="modal" class="modal-overlay hidden">
+        <form id="payment-form" class="modal">
+            <button type="button" id="close-modal" class="close-btn" aria-label="Close payment form">&times;</button>
+            <h2>Enter card details</h2>
+
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="text" id="card-number" name="card-number" placeholder="Enter card number"
+                   inputmode="numeric" pattern="[0-9 ]{12,19}" title="Enter a card number using digits only" required>
+            <input type="text" id="cvv" name="cvv" placeholder="Enter CVV"
+                   inputmode="numeric" pattern="[0-9]{3,4}" title="Enter the 3 or 4 digit CVV" required>
+
+            <button type="submit" class="green-btn">Pay</button>
+        </form>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

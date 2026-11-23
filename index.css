@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f1e9df;
+    color: #2b2320;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.app {
+    width: 100%;
+    max-width: 560px;
+    min-height: 100vh;
+    background: #fffdf9;
+    box-shadow: 0 0 40px rgba(60, 30, 10, 0.15);
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+    padding: 36px 28px;
+    min-height: 160px;
+    color: #ffffff;
+    background: linear-gradient(100deg, #1f1411 0%, #46281a 55%, #b5651d 100%);
+}
+
+header::after {
+    content: "🍔";
+    position: absolute;
+    right: -10px;
+    bottom: -30px;
+    font-size: 150px;
+    opacity: 0.55;
+    line-height: 1;
+}
+
+header h1 {
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+}
+
+header p {
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.15rem;
+    margin-top: 6px;
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    padding: 0 28px 40px;
+}
+
+.deal-banner {
+    margin-top: 20px;
+    padding: 10px 14px;
+    background: #fff1de;
+    color: #9a4a0a;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 26px 0;
+    border-bottom: 1px solid #e3dbd0;
+}
+
+.menu-emoji {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.menu-info {
+    flex: 1;
+}
+
+.menu-info h3 {
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.ingredients {
+    font-size: 0.85rem;
+    color: #7a6f68;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.add-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #c9bfb4;
+    background: #ffffff;
+    color: #3c3028;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #fff1de;
+    border-color: #e8590c;
+}
+
+#order {
+    padding-top: 28px;
+}
+
+#order h2 {
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.order-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 14px;
+}
+
+.order-item h3 {
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.remove-btn {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    color: #8b8079;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    color: #d33f3f;
+    text-decoration: underline;
+}
+
+.order-price {
+    margin-left: auto;
+    font-weight: 500;
+}
+
+.discount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    color: #c2540a;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 2px solid #2b2320;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.green-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 28px;
+    border: none;
+    background: #e8590c;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.green-btn:hover {
+    background: #c94a07;
+}
+
+.thanks {
+    margin-top: 40px;
+    padding: 28px 16px;
+    text-align: center;
+    background: #fff1de;
+    color: #9a4a0a;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.rating {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #f0d6b4;
+    font-size: 0.95rem;
+}
+
+.stars {
+    margin: 8px 0;
+}
+
+.star {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #d9cdbf;
+    cursor: pointer;
+}
+
+.star:hover,
+.star.active {
+    color: #f5a623;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(30, 20, 15, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 36px 32px 32px;
+    background: #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 14px;
+    border: 1px solid #c9bfb4;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+}
+
+.modal input:focus {
+    outline: 2px solid #e8590c;
+    outline-offset: 0;
+    border-color: transparent;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #8b8079;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #2b2320;
+}
